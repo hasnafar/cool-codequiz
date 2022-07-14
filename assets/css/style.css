@@ -1,0 +1,207 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input,output {
+  width: 40%;
+  padding: 12px 12px;
+  margin: 8px 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.choice-text{
+  width: 200px;
+  border: none;
+  background-color: purple;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+
+}
+.choice-text:hover{
+background-color: hotpink
+}
+
+.navleft {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: purple;
+  position:absolute;
+  top: 5px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.navleft:hover{
+  color: hotpink
+}
+
+.navright{
+  
+  float: right;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  right: 50px;
+
+}
+
+#countdown{
+  
+  float: right;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+
+}
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f9fbfd;
+}
+
+.wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+  color: hsl(206, 17%, 28%);
+}
+
+ul {
+  list-style: none;
+}
+
+.card, .card-header1 {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border-width: 1px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  color: hsl(206, 17%, 28%);
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 30px 40px;
+  position:relative;
+}
+
+.feedback {
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+
+
+.card-body {
+  min-height: 100px;
+}
+
+
+.btn, .submit-btn {
+  border: none;
+  background-color: purple;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+}
+.btn:hover, .submit-btn:hover{
+  background-color: hotpink
+  }
+
+button[disabled] {
+  cursor: default;
+  background: #c0c7cf;
+}
+
+.float-right {
+  float: right;
+}
+
+#password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
+}
+
+#all-done, #quiz-questions, #high-scores {
+  display:none;
+  margin-top:100px;
+}
+
+.card-last p{
+  margin-right:80px;
+  background: lavender;
+  padding:5px;
+}
+
+#startAgain {
+  margin-left:0px;
+}
+
+#start-button{
+  margin-left: 35%;
+}
+
+
+
+
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
+
+  #password {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn {
+    font-size: 0.8rem;
+  }
+}
