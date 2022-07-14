@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Head -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,65 +8,89 @@
     <title>Coding Quiz Challenge</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
   </head>
+
+  <!--Webpage Body-->
   <body>
+  
+    <!--Top Navigation Bar with Countdown-->
     <nav>
+       <!--View Highscores-->
       <h3 class="navleft" id="seeScores">View Highscores</h3>
+      <!-- Timer -->
       <h3 class="navright" >Time:</h3>
       <h3 id="countdown"></h3>
     </nav>
+
+    <!--Main-->
     <main class="wrapper">
+    <!--Start Quiz Section-->
     <section id="start-quiz">
       <header>
+        <!--Quiz Header-->
         <h1>Coding Quiz Challenge</h1>
       </header>
       <section class="card">
+        <!-- Start Quiz Text -->
         <h2> Try to answer the following code-related questions within the time limit. 
           Keep in mind that incorrect answers will penalize your score/time by 
           ten seconds!</h2>
+          <!-- Button to Start Quiz -->
           <button id="start-button" class="btn">Start Quiz</button>
       </section>
     </section>
 
-      <section class="card" id="quiz-questions">
-          <h2 id="question">Question</h2>
-          <section class="card-header">
-          <p class = "choice-text" data-number="1"> Choice 1</p>
-          </section>
-          <section class="card-header">
-          <p class = "choice-text" data-number="2"> Choice 2</p>
-          </section>
-          <section class="card-header">
-          <p class = "choice-text" data-number="3"> Choice 3</p>
-          </section>
-          <section class="card-header">
-          <p class = "choice-text" data-number="4"> Choice 4</p>
-          </section>
-          <section class="feedback"> 
-          <p id="answerToQuestion"></p>
-          </section>
+    <!-- Quiz Questions Section -->
+    <section class="card" id="quiz-questions">
+      <!-- Quiz Question Header -->
+      <h2 id="question">Question</h2>
 
-      </section>
-
-      
-      <section class="card" id="all-done">
+      <!-- Quiz Choice Options -->
         <section class="card-header">
-          <h2>All done! </h2>
+          <p class = "choice-text" data-number="1"> Choice 1</p>
         </section>
+        <section class="card-header">
+          <p class = "choice-text" data-number="2"> Choice 2</p>
+        </section>
+        <section class="card-header">
+          <p class = "choice-text" data-number="3"> Choice 3</p>
+        </section>
+        <section class="card-header">
+          <p class = "choice-text" data-number="4"> Choice 4</p>
+        </section>
+
+        <!-- Quiz Feedback Section -->
+        <section class="feedback"> 
+          <p id="answerToQuestion"></p>
+        </section>
+
+    </section>
+
+    <!-- Quiz End Section -->
+    <section class="card" id="all-done">
+      <!-- Quiz End Header -->
+      <section class="card-header">
+        <h2>All done! </h2>
+      </section>
+      <!-- Quiz Final Score Display and Form to Input Initials -->
         <ul class="card-last">
           <li>Your final score is: <span id=score></span> </li>
           <li>Enter initials: <input type="text" id="userInitial"> </input> <button id="submitBtn" class="submit-btn">Submit</button></li>
         </ul>
-      </section>
+    </section>
 
-      <section class="card" id="high-scores">
-        <section class="card-header">
-          <h2>High scores</h2>
-        </section>
-        <section class="card-last">
-          <article id="player1"></article>
-          <button id="startAgain" class="btn">Go back</button> <button id="clearScores" class="btn">Clear high scores</button>
-        </section>
+    <!-- View Highscores Section -->
+    <footer class="card" id="high-scores">
+      <!-- View Highscores Header -->
+      <section class="card-header">
+        <h2>High scores</h2>
       </section>
+      <!-- View Highscore Text -->
+      <section class="card-last">
+        <article id="player1"></article>
+      <!-- Button to start quiz again and to clear scores -->
+        <button id="startAgain" class="btn">Go back</button> <button id="clearScores" class="btn">Clear high scores</button>
+      </section>
+    </footer>
 
     </main>
     <script src="assets/js/script.js"></script>
