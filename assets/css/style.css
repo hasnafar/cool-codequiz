@@ -1,32 +1,34 @@
+/* Universal Selector Styles */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-input,output {
-  width: 40%;
-  padding: 12px 12px;
-  margin: 8px 8px;
-  box-sizing: border-box;
-  font-size: 16px;
+/* HTML Tags Styles */
+
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.choice-text{
-  width: 200px;
-  border: none;
-  background-color: purple;
-  border-radius: 8px;
-  font-size: 16px;
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-
-}
-.choice-text:hover{
-background-color: hotpink
+body {
+  font-family: sans-serif;
+  background-color: #f9fbfd;
 }
 
+/* Unordered List Properties */
+
+ul {
+  list-style: none;
+}
+
+/* Navigation Bar Properties */
 .navleft {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: purple;
@@ -51,6 +53,7 @@ background-color: hotpink
 
 }
 
+/* Timer Properties */
 #countdown{
   
   float: right;
@@ -61,24 +64,7 @@ background-color: hotpink
   right: 15px;
 
 }
-html,
-body,
-.wrapper {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
-}
-
-.wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
+/* Header Properties */
 
 header {
   text-align: center;
@@ -87,11 +73,36 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
-ul {
-  list-style: none;
+/* Enter Initials Box Properties */
+
+input {
+  width: 40%;
+  padding: 12px 12px;
+  margin: 8px 8px;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
-.card, .card-header1 {
+/* Question Choices Properties */
+
+.choice-text{
+  width: 200px;
+  border: none;
+  background-color: purple;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+
+}
+.choice-text:hover{
+background-color: hotpink
+}
+
+
+/*Main Box Properties */
+.card{
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
   border-width: 1px;
@@ -104,6 +115,7 @@ ul {
   position:relative;
 }
 
+/*Correct or Wrong Feedback Properties */
 .feedback {
   display: block;
   width: 100%;
@@ -111,12 +123,7 @@ ul {
   height: 2px;
 }
 
-
-.card-body {
-  min-height: 100px;
-}
-
-
+/* Button Properties */
 .btn, .submit-btn {
   border: none;
   background-color: purple;
@@ -136,47 +143,6 @@ ul {
   background-color: hotpink
   }
 
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
-}
-
-.float-right {
-  float: right;
-}
-
-#password {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  display: block;
-  width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
-  border-radius: 6px;
-  resize: none;
-  overflow: hidden;
-}
-
-#all-done, #quiz-questions, #high-scores {
-  display:none;
-  margin-top:100px;
-}
-
-.card-last p{
-  margin-right:80px;
-  background: lavender;
-  padding:5px;
-}
-
 #startAgain {
   margin-left:0px;
 }
@@ -185,9 +151,20 @@ button[disabled] {
   margin-left: 35%;
 }
 
+/* Quiz Sections */
+#all-done, #quiz-questions, #high-scores {
+  display:none;
+  margin-top:100px;
+}
 
+/* Score Box Properties */
+.card-last p{
+  margin-right:80px;
+  background: lavender;
+  padding:5px;
+}
 
-
+/* Media Query for Responsive Design */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;

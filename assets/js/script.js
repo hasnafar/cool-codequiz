@@ -14,7 +14,7 @@ var currentQuestion = {};
 var acceptingAnswers = false;
 var score = 0;
 var questionCounter = 0;
-var timeLeft = 15;
+var timeLeft = 75;
 var availableQuestions = [];
 
 var myQuestions = [
@@ -147,8 +147,6 @@ function countdown() {
 }, 1000);
 
 }
-
-
 
 
 function storeInitials(event){
