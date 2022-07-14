@@ -141,8 +141,8 @@ function countdown() {
   var timeInterval = setInterval(function () {
     timerEl.textContent = timeLeft;
     timeLeft--;
-
-    if (timeLeft === -1) {
+    
+    if (timeLeft <= -1) {
       clearInterval(timeInterval);
       timerEl.textContent = '';
       document.getElementById('quiz-questions').style.display='none';
