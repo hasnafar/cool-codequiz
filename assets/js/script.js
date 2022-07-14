@@ -1,3 +1,4 @@
+// Global variables for selecting HTML elements are declared here.
 var timerEl = document.getElementById('countdown');
 var startButton = document.getElementById('start-button');
 var submitButton = document.getElementById('submitBtn');
@@ -9,12 +10,13 @@ var initial=document.getElementById('userInitial');
 var clearScoresBtn =document.getElementById ('clearScores');
 var reloadBtn =document.getElementById ('startAgain')
 
-var randomPlayerNumber = Math.floor(Math.random()*100)+1;
-var currentQuestion = {};
+// Global helper variables are declared here.
+var randomPlayerNumber = Math.floor(Math.random()*100)+1; 
+var currentQuestion = {}; //
 var acceptingAnswers = false;
 var score = 0;
 var questionCounter = 0;
-var timeLeft = 75;
+var timeLeft = 40;
 var availableQuestions = [];
 
 var myQuestions = [
@@ -60,10 +62,11 @@ var myQuestions = [
 	}
 ];
 
+// Assigns question worth and max questions in the quiz
 const Correct_Worth = 10;
 const Max_Questions = 5;
 
-
+// This function starts the game by displaying the questions.
 function startGame() {
   questionCounter = 0;
   score = 0;
@@ -72,6 +75,7 @@ function startGame() {
   getNewQuestion ();
 };
 
+// This function displays new questions one after another.
 
 function getNewQuestion() {
 
@@ -80,7 +84,7 @@ function getNewQuestion() {
     return;
    }
   questionCounter++;
-  const questionIndex = 0; //Math.floor(Math.random() * availableQuestions.length)
+  const questionIndex = 0; 
   
   currentQuestion = availableQuestions[questionIndex];
   question.innerText=currentQuestion.question;
@@ -96,6 +100,7 @@ function getNewQuestion() {
 
 };
 
+// This increments scores, gives feedback, and takes time off countdown if a question is wrong.
 choices.forEach(choice => {
   choice.addEventListener("click", e =>{
 
@@ -112,6 +117,7 @@ choices.forEach(choice => {
     } else {
       
       document.getElementById('answerToQuestion').textContent='Wrong!';
+      timeLeft -= 10;
 
     }
 
@@ -124,6 +130,7 @@ incrementScore =num => {
   scoreText.innerText = score;
 };
 
+// This function handles the timer.
 function countdown() {
   
   const startQuiz = document.getElementById('start-quiz');
@@ -148,7 +155,7 @@ function countdown() {
 
 }
 
-
+// This function stores user initials and scores.
 function storeInitials(event){
       var playerNames=document.getElementById('userInitial').value;
       if(playerNames.trim()=="")
@@ -157,6 +164,7 @@ function storeInitials(event){
       displayHighScores();
 }
 
+// This function displays user highscores
 function displayHighScores(){
   document.getElementById('quiz-questions').style.display='none';
   document.getElementById('all-done').style.display='none';
@@ -179,6 +187,7 @@ function displayHighScores(){
   }
 }
 
+// This function clears the scoreboard.
 function clearScores () {
   localStorage.clear();
   const list = document.getElementById("player1");
@@ -187,17 +196,19 @@ function clearScores () {
   }
 }
 
+// This function restarts the quiz.
 function refreshPage(){
   window.location.reload();
 }
 
-
-startButton.addEventListener("click", countdown);
+// Adding event listeners to buttons.
+startButton.addEventListener("click", countdown); 
 submitButton.addEventListener("click", storeInitials);
 viewhsButton.addEventListener("click", displayHighScores);
 clearScoresBtn.addEventListener("click", clearScores);
 reloadBtn.addEventListener("click",refreshPage);
 
+// Starts the quiz
 startGame();
 
 
